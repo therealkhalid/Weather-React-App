@@ -19,14 +19,14 @@ function App() {
   <div className="container py-2 ">
     <div className="row d-flex justify-content-center align-items-center ">
       <div className="col-md-10 col-lg-8 col-xl-6">
-        <div className="card" style={{borderRadius: "40px",height:'10rem'}}>
-          <div className="bg-image" style={{borderRadius: "35px"}}>
+        <div className="card" >
+          <div className="card-img" >
             <img src={logo}
-              className="card-img " alt="weather" height={670} />
+              className=" img img-fluid w-100" alt="weather" />
             <div className="mask"></div>
           </div>
           <div className="card-img-overlay text-dark p-5">
-            <h4 className="mb-0 text-center"><input value={location}onChange={event => setLocation(event.target.value)}onKeyPress={searchLocation} placeholder='Enter Location'type="text" /></h4>
+            <h4 className="mb-0 text-center"><input className='form-control' value={location}onChange={event => setLocation(event.target.value)}onKeyPress={searchLocation} placeholder='Enter Location'type="text" /></h4>
             <p className="display-2 my-3 text-light">{data.name}</p>
             <h1 className="display-2 my-3 text-light">{data.main ? (data.main.feels_like-273.15).toFixed() +' °C': null}</h1>
             <p className="display-2 my-3 text-light description">
