@@ -32,9 +32,9 @@ function App() {
             <p className="display-2 my-3 text-light description">
             {(() => {
               if(data.weather){
-                if(data.weather[0].main=='Clouds'){
+                if(data.weather[0].main==='Clouds'){
                   return (<>Clouds<i className='bi bi-clouds '></i></>)
-                }else if(data.weather[0].main=='Clear'){
+                }else if(data.weather[0].main==='Clear'){
                   return (<>Clear<i class="bi bi-brightness-high"></i></>)
                 }
               }
